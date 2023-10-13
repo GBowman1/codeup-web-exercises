@@ -1,5 +1,7 @@
 'use strict';
 
+console.log('Hello from external JavaScript');
+
 alert('Welcome to my Website!');
 // webpage greeting pop-up
 let userFavColor = prompt('What is your favorite color?');
