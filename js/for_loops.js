@@ -37,7 +37,7 @@ for (let i = 1; i <= n; i++) {
 }
 console.log(string);
 
-var numberToStopAt = 5;
+let numberToStopAt = 5;
 
 for (let i = 100; i >= 5; i-=5) {
 

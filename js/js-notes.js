@@ -266,6 +266,11 @@ switch(meatOfChoice) {
         break;
 }
 
+(() => {
+    console.log("WOWWWWWW");
+    let variable = "Haha you will never get this";
+})();
+// immediatley evoked function, hidden from user in dev console, aka iffy or effy or something like that
 
 
 

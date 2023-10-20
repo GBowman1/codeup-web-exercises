@@ -2,7 +2,7 @@
 
 let userOdd = true;
 while (userOdd){
-    let userInput = parseFloat(prompt("Please enter your a odd number."));
+    let userInput = parseFloat(prompt("Please enter a odd number."));
     if(userInput % 2 !== 0){
         console.log(`Number to skip is: ${userInput}`)
         for (let i = 1; i <= 50; i++) {
