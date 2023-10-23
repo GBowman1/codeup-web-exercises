@@ -61,6 +61,28 @@ console.log(names[3]);
     }
     for (const last of numArr) {
         console.log('Last: ' + numArr[4]);
+        function first(arr) {
+            return arr[0];
+        }
+
+        // correct answer from walkthrough
+
+        // function second(arr) {
+        //     let result = arr[1];
+        //     return result;
+        // }
+        //
+        // function last(arr) {
+        //     return arr[arr.length - 1];
+        //
+        // }
+        //
+        // console.log(first(names));
+        // console.log(first([1, 2, 3, 4, 5]));
+        // console.log(second(names));
+        // console.log(second([1, 2, 3, 4, 5]));
+        // console.log(last(names));
+        // console.log(last([1, 2, 3, 4, 5]));
     }
 
 })();
