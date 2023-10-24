@@ -25,7 +25,6 @@ let planetsArray = planetsString.split('|')
 let planetsBR = planetsArray.join('<br>');
 console.log(planetsBR);
 
-
-
-
+let planetsUL = '<ul><li>${planetsArray.join('</li><li>')}</li></ul>';
+    document.getElementById('html-go-here').innerHTML = planetsUL;
 })();
