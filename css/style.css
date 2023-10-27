@@ -1,0 +1,16 @@
+.fancy-header {
+    font-family: "Arial Rounded MT Bold";
+    color: purple; /* single line comment */
+    text-decoration: underline;
+}
+.company-info {
+    color: navajowhite;
+    font-family: AppleGothic;
+    background: slategray;
+}
+.header-space {
+    background: slategray;
+}
+body {
+    background: lightslategray;
+}
