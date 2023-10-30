@@ -1,16 +1,72 @@
+* {
+    font-family: Antonio, sans-serif;
+    color: #393E41;
+}
+.header-space {
+    text-align: center;
+}
+h3 {
+    text-decoration: underline;
+}
 .fancy-header {
-    font-family: "Arial Rounded MT Bold";
-    color: purple; /* single line comment */
+    font-family: Antonio, sans-serif;
+    color: #3F88C5; /* single line comment */
     text-decoration: underline;
 }
 .company-info {
     color: navajowhite;
-    font-family: AppleGothic;
-    background: slategray;
+    font-family: Antonio, sans-serif;
+    background: rgba(255,255,255,.6);
 }
 .header-space {
-    background: slategray;
+    background: rgba(255,255,255,.6);
 }
-body {
-    background: lightslategray;
+/*body {*/
+/*    background: lightslategray;*/
+/*}*/
+ul {
+    list-style: square;
 }
+ol {
+    list-style: upper-roman;
+}
+html {
+    background-size: cover;
+    background-image: url("../img/welcomBG.jpg");
+}
+a {
+    color: #E94F37;
+    transition: .5s;
+    background-color: #F6F7EB;
+    text-decoration: none;
+}
+a:hover {
+    color: #932210;
+    font-size: 32px;
+}
+a:active {
+    color: #370D06;
+}
+table, td, tr {
+    font-size: 20px;
+    padding: 5px;
+    border-style: solid;
+    border-color: black;
+    background-color: #F6F7EB;
+}
+#productTable {
+    font-size: 2em;
+    font-weight: bold;
+}
+#companyVision {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+img {
+    background-color: #393E41;
+    border: 2px solid #F6F7EB;
+    border-radius: 5px;
+    padding: 10px;
+}
+
