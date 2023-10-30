@@ -69,4 +69,12 @@ img {
     border-radius: 5px;
     padding: 10px;
 }
+hr {
+    top: 40px;
+    height: 20px;
+    margin-bottom: 40px;
 
+}
+footer {
+    text-align: center;
+}
