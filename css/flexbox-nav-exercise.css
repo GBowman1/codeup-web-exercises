@@ -16,9 +16,10 @@ ul {
 nav a {
     text-decoration: none;
     color: black;
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     display: inline-block; /* inline-block to increase clickable area beyond the text */
-    padding: 1em; /* increases clickable area of anchor tags on all sides by 1em */
+    padding: 2em 1em; /* increases clickable area of anchor tags on all sides by 1em */
+
 }
 nav a:hover {
     background: white;
@@ -28,8 +29,9 @@ nav ul li:nth-child(4) {
 /*    alligns logo more centerly on page by making jobs area larger*/
 }
 nav ul li:nth-child(5) {
-    font-size: 2em;
-    flex-basis: 50%;
+    font-size: 3em;
+    padding: .2em;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
