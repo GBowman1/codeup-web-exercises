@@ -75,7 +75,19 @@ button.btn.btn-login {
     min-width: 250px;
 }
 
-#cancel-container {
+/*#cancel-container {*/
+/*    height: 50px;*/
+/*    width: 50px;*/
+/*    !*border: 1px solid black;*!*/
+/*    border-radius: 50%;*/
+/*    background-color: white;*/
+/*    position: absolute;*/
+/*    top: -12px;*/
+/*    right: -12px;*/
+/*    box-shadow: -5px 5px 5px grey;*/
+
+/*}*/
+#cancel-button {
     height: 50px;
     width: 50px;
     /*border: 1px solid black;*/
@@ -85,12 +97,6 @@ button.btn.btn-login {
     top: -12px;
     right: -12px;
     box-shadow: -5px 5px 5px grey;
-    z-index: 6;
-}
-#cancel-button {
-    position: absolute;
-    top: 14px;
-    right: 14px;
 }
 #background-container {
     position: absolute;
