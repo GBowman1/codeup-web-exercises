@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <link rel="stylesheet" href="css/konami-style.css">
+
+</head>
+<body>
+<div class="container">
+
+    <h1>Konami Code</h1>
+    <h2></h2>
+</div>
+<div class="code">
+</div>
+
+<script>
+    "use strict";
+
+    document.addEventListener("keyup", event => console.log(event.key))
+
+    let konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
+    let keys = {
+        13: 'Enter',
+        37: 'ArrowLeft',
+        38: 'ArrowUp',
+        39: 'ArrowRight',
+        40: 'ArrowDown',
+        65: 'a',
+        66: 'b',
+
+    };
+    document.addEventListener('keydown', checkCode, false);
+    let keyCount = 0
+    function checkCode(event) {
+        let keyPressed = keys[event.keyCode];
+        if (keyPressed === konamiCode[keyCount]) {
+            keyCount++;
+
+            if (keyCount === konamiCode.length) {
+                codeActivated();
+                resetKey();
+            }
+        } else {
+            resetKey();
+        }
+    }
+    function codeActivated() {
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('h1').style.color = 'white';
+        document.querySelector('h1').innerText = 'You Have Added 30 Lives!';
+    }
+    function resetKey() {
+        keyCount = 0;
+    }
+
+    document.addEventListener("keyup", showImg)
+    function showImg (event){
+        let keyPressed = keys[event.keyCode];
+        if (keyPressed === 'ArrowLeft') {
+            document.querySelector('h2').innerHTML = '<i class="fa-solid fa-square-caret-left" style="color: #000000;"></i>'
+        } else if (keyPressed === 'ArrowUp') {
+            document.querySelector('h2').innerHTML = '<i class="fa-solid fa-square-caret-up" style="color: #000000;"></i>'
+        } else if (keyPressed === 'ArrowRight') {
+            document.querySelector('h2').innerHTML = '<i class="fa-solid fa-square-caret-right" style="color: #000000;"></i>'
+        } else if (keyPressed === 'ArrowDown') {
+            document.querySelector('h2').innerHTML = '<i class="fa-solid fa-square-caret-down" style="color: #000000;"></i>'
+        } else if (keyPressed === 'b') {
+            document.querySelector('h2').innerHTML = '<i class="fa-solid fa-b" style="color: #000000;"></i>'
+        } else if (keyPressed === 'a') {
+            document.querySelector('h2').innerHTML = '<i class="fa-solid fa-a" style="color: #000000;"></i>'
+        } else if (keyPressed === 'Enter') {
+            document.querySelector('h2').innerHTML = '<i class="fa-solid fa-gamepad" style="color: #000000;"></i>'
+        }
+    }
+
+
+</script>
+<script src="https://kit.fontawesome.com/88f3753932.js" crossorigin="anonymous"></script>
+</body>
+</html>
