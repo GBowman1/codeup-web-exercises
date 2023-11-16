@@ -72,6 +72,24 @@
         const changeSubp = () => {subParagraphs[0].innerText = "Mission Accomplished!"};
         button4.addEventListener("click",changeSubp);
 
+        // Mouse Event Exercise!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        document.querySelector("h1").addEventListener("click", () => {document.querySelector("h1").style.backgroundColor = "blue"});
+
+        document.querySelector("p").addEventListener("dblclick", () => {document.querySelector("p").style.fontSize = "18px"});
+
+        const liEvent = document.querySelectorAll("li");
+        for (let i = 0; i < liEvent.length; i++) {
+            liEvent[i].addEventListener("mouseenter", () => {
+                liEvent[i].style.color = "red";
+            })
+        }
+        for (let i = 0; i < liEvent.length; i++) {
+            liEvent[i].addEventListener("mouseleave", () => {
+                liEvent[i].style.color = "black";
+            })
+        }
+
 </script>
 </body>
 </html>
