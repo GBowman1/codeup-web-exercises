@@ -1,6 +1,6 @@
+"use strict";
 
 (() => {
-    "use strict"
 
     const users = [
         {
@@ -40,5 +40,21 @@
         }
     ];
 
+    const langGreaterThan3 = users.filter(language => language.languages.length >= 3);
+    console.log(langGreaterThan3);
+
+    const userEmail = users.map(email => email.email);
+    console.log(userEmail);
+
+    const totalYears = users.reduce((total, user) => total + user.yearsOfExperience, 0);
+    const avg = totalYears / users.length;
+    console.log(totalYears);
+    console.log(avg);
+
+    const longestEmail = users.reduce((longEmail, user) => (longEmail.length > user.email.length) ? longEmail : user.email, "");
+    console.log(longestEmail);
+
+    const instructorList = users.reduce((str, user , i) => (i === users.length - 1) ? `${str} ${user.name}.` : `${str} ${user.name},`  , "Your instructors are:");
+    console.log(instructorList);
 
 })();
