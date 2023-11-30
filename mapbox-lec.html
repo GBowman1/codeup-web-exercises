@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>First Mapbox Map</title>
+  <!-- Mapbox CSS -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map' style="width: 80vw; height: 50vh; margin: auto"></div>
+
+<script src="js/keys.js"></script>
+<script src="js/geocode.js"></script>
+<script>
+  mapboxgl.accessToken = MB_KEY;
+  const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v12', // style URL
+    zoom: 9, // starting zoom
+    center: [-98.4916, 29.4252] // [lng, lat]
+
+  });
+  // Add zoom and rotation controls to the map.
+  map.addControl(new mapboxgl.NavigationControl());
+
+//   geocode
+
+  geocode("8700 Tesoro Drive, San Antonio, TX 78217", MB_KEY).then(coords => {
+    const marker = new mapboxgl.Marker()
+            .setLngLat(coords)
+            .addTo(map);
+
+    const codeupPopup = new mapboxgl.Popup()
+            .setHTML("<p>Welcome to our San Antonio campus!</p>");
+
+    marker.setPopup(codeupPopup);
+  });
+  // geocode("900 Jackson St Unit 410, Dallas, TX 75202", MB_KEY).then(coords => {
+  //
+  //   let popup = new mapboxgl.Popup()
+  //         .setLngLat([])
+  //         .setHTML("<p>Codeup Rocks</p>")
+  //         .addTo(map);
+  // })
+</script>
+</body>
+</html>
