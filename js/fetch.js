@@ -20,7 +20,7 @@
 
                         let p = document.createElement("p");
                         let h4 = document.createElement("h4");
-                        p.innerText = data[i].created_at;
+                        p.innerText = new Date(data[i].created_at);
                         h4.innerText = data[i].type;
                         let div = document.createElement("div");
                         div.appendChild(h4);
@@ -30,7 +30,7 @@
                         main.appendChild(div);
                     } else if (data[0].type === "PushEvent") {
                         let p1 = document.createElement("p");
-                        p1.innerText = data[0].created_at;
+                        p1.innerText = new Date(data[0].created_at);
                         let divRecent = document.querySelector("#recent-push");
                         divRecent.appendChild(p1);
                     }
