@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Mapbox Map</title>
+    <!-- Mapbox CSS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map' style="width: 80vw; height: 50vh; margin: auto"></div>
+<label for="zoom">Choose a zoom level:</label>
+
+<select name="zoom" id="zoom">
+    <option value="5">5</option>
+    <option value="10" selected>10</option>
+    <option value="15">15</option>
+    <option value="20">20</option>
+</select>
+
+<script src="js/keys.js"></script>
+<script src="js/geocode.js"></script>
+<script>
+    mapboxgl.accessToken = MB_KEY;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v12', // style URL
+        zoom: 12, // starting zoom
+        center: [-157.831755, 21.2886] // [lng, lat]
+
+    });
+    // Add zoom and rotation controls to the map.
+    map.addControl(new mapboxgl.NavigationControl());
+    console.log(map.style)
+    document.querySelector("#zoom").addEventListener("input", () => {
+        map.style.z = document.querySelector("#zoom").value;
+    })
+    //  Object for info
+    let rObj = [
+        {
+            "name": "The Boiling Crab",
+            "location": "330 Coral Street, Honolulu, HI 96813",
+            "type": "Seafood",
+            "price": "$$$"
+        }, {
+            "name": "Raising Canes",
+            "location": "2615 S King St Unit 102, Honolulu, HI 96826",
+            "type": "Fast-Food, Chicken",
+            "price": "$"
+        }, {
+            "name": "Zippy's",
+            "location": "601 Kapahulu Avenue, Honolulu, HI 96815",
+            "type": "Hawaiian",
+            "price": "$$"
+        }
+    ]
+    // geocode
+    for(let i = 0; i < rObj.length; i++) {
+        console.log(rObj[i])
+        geocode(rObj[i].location, MB_KEY).then(coords => {
+            const marker = new mapboxgl.Marker()
+                .setLngLat(coords)
+                .addTo(map);
+
+            const popUp = new mapboxgl.Popup()
+                .setHTML(`<h2>${rObj[i].name}</h2>` + `<h4>${rObj[i].type}</h4>` + `<p>${rObj[i].price}</p>`);
+
+
+            marker.setPopup(popUp);
+        })
+    }
+</script>
+</body>
+</html>
