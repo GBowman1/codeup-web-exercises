@@ -1,0 +1,15 @@
+.custom-card {
+    width: 20rem;
+}
+img {
+    width: 50px !important;
+    height: 50px;
+    margin: auto;
+}
+.card-title {
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+.navbar-brand {
+    color: white;
+}
