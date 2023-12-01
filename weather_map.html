@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>First Mapbox Map</title>
+    <!-- Mapbox CSS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css' rel='stylesheet'/>
+    <!--    Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--    Custom CSS Page-->
+    <link rel="stylesheet" href="css/weather_map.css">
+
+</head>
+<body>
+<main>
+    <nav class="navbar bg-primary mb-1">
+        <div class="container-fluid">
+            <a class="navbar-brand">Weather App</a>
+            <a class="navbar-brand ms-auto" id="current-city">Current City: San Antonio, TX</a>
+        </div>
+    </nav>
+
+    <section class="row">
+        <form id="location-input">
+
+            <!--        USER CITY INPUT-->
+            <div class="input-group mb-3 col-2" id="location">
+                <span class="input-group-text" id="city">City</span>
+                <input type="text" class="form-control" placeholder="City" id="city-input">
+
+                <!--        USER STATE INPUT-->
+                <span class="input-group-text" id="state">State</span>
+                <input type="text" class="form-control" placeholder="State Abbreviation" id="state-input">
+
+                <!--        USER COUNTRY INPUT-->
+                <span class="input-group-text" id="country">Country</span>
+                <input type="text" class="form-control" placeholder="Country Abbreviation" id="country-input">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary mb-3">Search!</button>
+            </div>
+        </form>
+    </section>
+    <section>
+        <div id='map' style="width: 80vw; height: 50vh; margin: auto" class="mb-2"></div>
+    </section>
+    <div><h2 class="text-center">5 Day Forecast</h2></div>
+    <section id="weather-data" class="row justify-content-around">
+<!--        DATA FOR CURRENT DAY-->
+        <div class="card col-2 custom-card mb-2">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Loading...</h5>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+            </div>
+        </div>
+<!--        DATA FOR 1ST DAY AFTER-->
+        <div class="card col-2 custom-card mb-2">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Loading...</h5>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+            </div>
+        </div>
+<!--        DATA FOR 2ND DAY AFTER-->
+        <div class="card col-2 custom-card mb-2">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Loading...</h5>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+            </div>
+        </div>
+<!--        DATA FOR 3RD DAY AFTER-->
+        <div class="card col-2 custom-card mb-2">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Loading...</h5>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+            </div>
+        </div>
+<!--        DATA FOR 4TH DAY AFTER-->
+        <div class="card col-2 custom-card mb-2">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Loading...</h5>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+                <p class="card-text">Loading...</p>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--External Script Sources-->
+
+<!--keys-->
+<script src="js/keys.js"></script>
+<!--Geocode to get locations-->
+<script src="js/geocode.js"></script>
+<!--JS for weather map-->
+<script src="js/weather_map.js"></script>
+<!--Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+</html>
